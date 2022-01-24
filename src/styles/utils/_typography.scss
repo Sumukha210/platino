@@ -1,0 +1,110 @@
+$heading: (
+  // 92px
+  "heading-1":
+    (
+      "font-size": 5.75rem,
+      "line-height": 128px,
+    ),
+  // 72px
+  "heading-2":
+    (
+      "font-size": 4.5rem,
+      "line-height": 96px,
+    ),
+  // 46px
+  "heading-3":
+    (
+      "font-size": 2.875rem,
+      "line-height": 64px,
+    ),
+  // 32px
+  "heading-4":
+    (
+      "font-size": 2rem,
+      "line-height": 48px,
+    ),
+  // 16px
+  "heading-5":
+    (
+      "font-size": 1rem,
+      "line-height": 24px,
+    )
+);
+
+$sub-heading: (
+  // 18px
+  "sub-head-1":
+    (
+      "font-size": 1.125rem,
+      "line-height": 34px,
+    ),
+  // 16px
+  "sub-head-2":
+    (
+      "font-size": 1rem,
+      "line-height": 28px,
+    ),
+  // 14px
+  "sub-head-3":
+    (
+      "font-size": 0.875rem,
+      "line-height": 24px,
+    ),
+  // 12px
+  "sub-head-4":
+    (
+      "font-size": 0.75rem,
+      "line-height": 18px,
+    )
+);
+
+$caption: (
+  // 16px
+  "caption-1":
+    (
+      "font-size": 1rem,
+      "line-height": 32px,
+    ),
+  // 14px
+  "caption-2":
+    (
+      "font-size": 0.875rem,
+      "line-height": 24px,
+    ),
+  // 12px
+  "caption-3":
+    (
+      "font-size": 0.75rem,
+      "line-height": 18px,
+    )
+);
+
+@mixin getTypoClasses($array, $isHeading: false, $isCaption: false) {
+  @each $key, $value in $array {
+    .#{$key} {
+      font-size: map-get($value, "font-size");
+      line-height: map-get($value, "line-height");
+      font-style: normal;
+
+      //  only to heading class
+      @if $isHeading {
+        &:not(&.bold) {
+          font-weight: 500;
+        }
+
+        &.bold {
+          font-weight: 600;
+        }
+      }
+
+      // only to caption class
+      @if $isCaption {
+        letter-spacing: 0.42rem;
+      }
+    }
+  }
+}
+
+@include getTypoClasses($heading, true);
+@include getTypoClasses($sub-heading);
+@include getTypoClasses($caption, $isCaption: true);
