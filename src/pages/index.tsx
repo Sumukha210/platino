@@ -1,25 +1,12 @@
-import Button from "@/element/button";
-import { gsap, Expo } from "gsap";
-import React, { useEffect, useRef } from "react";
+import Home from "@/layout/home/home";
+import React from "react";
 
-const Home = () => {
-  const title = useRef(null);
-
-  useEffect(() => {
-    gsap.from(title.current, {
-      y: 40,
-      autoAlpha: 0,
-      duration: 1.2,
-      ease: Expo.easeInOut,
-    });
-  }, []);
-
+const Index = () => {
   return (
-    <div ref={title} style={{ background: "lightgreen" }}>
-      <h1>Home</h1>
-      <Button name="Hello btn" />
-    </div>
+    <>
+      <Home />
+    </>
   );
 };
 
-export default Home;
+export default Index;

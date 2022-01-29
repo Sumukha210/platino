@@ -1,7 +1,8 @@
 // TODO :- CUSTOM CONTAINER
 .container {
+  width: 100%;
   @include breakpoint-down(sm) {
-    width: 100%;
+    // width: 100%;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -31,19 +32,7 @@
 
   @include breakpoint-up(xxl) {
     max-width: 1320px;
-  }
-}
-
-// TODO :- INNER CONTAINER
-.inner-container {
-  @include breakpoint-down(md) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  @include custom-breakpoint(md, xl) {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    padding: 0px 20px;
   }
 }
 

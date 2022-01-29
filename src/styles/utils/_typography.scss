@@ -31,27 +31,27 @@ $heading: (
     )
 );
 
-$sub-heading: (
+$sub-title: (
   // 18px
-  "sub-head-1":
+  "sub-title-1":
     (
       "font-size": 1.125rem,
       "line-height": 34px,
     ),
   // 16px
-  "sub-head-2":
+  "sub-title-2":
     (
       "font-size": 1rem,
       "line-height": 28px,
     ),
   // 14px
-  "sub-head-3":
+  "sub-title-3":
     (
       "font-size": 0.875rem,
       "line-height": 24px,
     ),
   // 12px
-  "sub-head-4":
+  "sub-title-4":
     (
       "font-size": 0.75rem,
       "line-height": 18px,
@@ -88,6 +88,8 @@ $caption: (
 
       //  only to heading class
       @if $isHeading {
+        font-family: var(--secondary-font);
+
         &:not(&.bold) {
           font-weight: 500;
         }
@@ -106,5 +108,5 @@ $caption: (
 }
 
 @include getTypoClasses($heading, true);
-@include getTypoClasses($sub-heading);
+@include getTypoClasses($sub-title);
 @include getTypoClasses($caption, $isCaption: true);

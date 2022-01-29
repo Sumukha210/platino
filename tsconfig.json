@@ -32,6 +32,9 @@
       "@/shared/*": [
         "./src/components/shared/*"
       ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ],
     }
   },
   "include": [
