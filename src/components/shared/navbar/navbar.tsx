@@ -1,9 +1,9 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RiMenu2Fill } from "react-icons/ri";
 import { BsChevronRight } from "react-icons/bs";
 import { Nav } from "./styles";
 import NavMenu from "./navMenu";
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ const Navbar = () => {
         y: 30,
         ease: "Power1.ease",
       });
-  });
+  }, []);
 
   useEffect(() => {
     if (menuOpen) {
