@@ -17,7 +17,7 @@ const features: featuresType[] = [
 
 const Features = () => {
   return (
-    <Container>
+    <Container id="features">
       {features.map(({ name, Icon }, key) => (
         <div key={key} className="feature">
           <span>{<Icon />}</span>

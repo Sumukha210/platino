@@ -38,6 +38,7 @@ const CustomBtn = styled.button<CustomBtnProps>`
   position: relative;
   z-index: 2;
   transition: all 0.4s ease-in;
+  display: inline-block;
 
   &::before {
     content: "";

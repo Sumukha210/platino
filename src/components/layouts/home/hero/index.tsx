@@ -8,7 +8,7 @@ import Features from "./features";
 const Hero = () => {
   return (
     <>
-      <Banner>
+      <Banner id="hero">
         <div className="container">
           <Content>
             <div className="row justify-center">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import homeImg from "@/assets/images/home.jpg";
 import aboutImg from "@/assets/images/about.jpg";
@@ -7,6 +7,7 @@ import wellnessImg from "@/assets/images/wellness.jpg";
 import pricingImg from "@/assets/images/pricing.jpg";
 import contactImg from "@/assets/images/contact.jpg";
 import NextImg from "next/image";
+import { gsap, Expo } from "gsap";
 
 interface navMenuOptionsType {
   name: string;
@@ -23,8 +24,13 @@ const navMenuOptions: navMenuOptionsType[] = [
   { name: "Contact us", img: contactImg, isSelected: true },
 ];
 
-const NavMenu = () => {
+interface navMenuType {
+  menuOpen: boolean;
+}
+
+const NavMenu: React.FC<navMenuType> = ({ menuOpen }) => {
   const [currentImg, setCurrentImg] = useState(navMenuOptions[0].img);
+  const wrapperRef = useRef(null);
 
   const handleMouseMove = (e: any, item: any) => {
     const targetContent = e.target?.textContent;
@@ -33,9 +39,29 @@ const NavMenu = () => {
       setCurrentImg(() => item.img);
     }
   };
+  // const tl = useRef<gsap.core.Timeline>();
+
+  // useEffect(() => {
+  //   tl.current = gsap.timeline({ defaults: { duration: 1.1 }, paused: true });
+
+  //   tl.current.paused();
+  //   tl.current.to(wrapperRef.current, {
+  //     x: 0,
+  //     duration: 0.7,
+  //     ease: "Expo.in",
+  //   });
+  // }, []);
+
+  // useEffect(() => {
+  //   if (menuOpen) {
+  //     tl.current!.play();
+  //   } else {
+  //     tl.current!.reverse();
+  //   }
+  // }, [menuOpen]);
 
   return (
-    <NavWrapper>
+    <NavWrapper ref={wrapperRef} id="navMenu">
       <LeftSide>
         {navMenuOptions.map(item => (
           <h4
@@ -64,12 +90,14 @@ interface RightSideType {
 export const NavWrapper = styled.div`
   position: fixed;
   right: 0%;
-  width: 0%;
+  width: 100%;
   height: 100vh;
   z-index: 10000;
+  transform: translateX(120vw);
+  /* opacity: 0;
+  visibility: hidden; */
 
-  background-color: var(--secondary-200);
-
+  background-color: var(--secondary-400);
   display: grid;
   grid-template-columns: 1fr 0.7fr;
 `;
@@ -81,8 +109,10 @@ export const LeftSide = styled.div`
   padding-right: 4rem;
 
   .menuName {
-    margin-bottom: 2rem;
-    display: block;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-weight: 600 !important;
+    color: var(--light-color);
   }
 `;
 
