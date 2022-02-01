@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { RiMenu2Fill } from "react-icons/ri";
 import { BsChevronRight } from "react-icons/bs";
 import { Nav } from "./styles";
@@ -88,7 +88,10 @@ const Navbar = () => {
             </div>
 
             <div className="bookNow">
-              <span>Book Now</span>
+              <span>
+                <span>Book</span>
+                <span>Now</span>
+              </span>
               <span>
                 <BsChevronRight />
               </span>

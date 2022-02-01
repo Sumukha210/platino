@@ -106,10 +106,17 @@ export const NavWrapper = styled.div`
 `;
 
 export const LeftSide = styled.div`
-  margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
   padding-right: 4rem;
+
+  @media (min-width: 576px) {
+    margin-left: auto;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 5rem 32px;
+  }
 
   .menuName {
     margin-bottom: 1.5rem;

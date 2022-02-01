@@ -1,14 +1,17 @@
 import React from "react";
-import Hero from "./hero";
 import AboutIntro from "@/module/about_intro/aboutIntro";
 import Facilities from "@/module/facilities/facilities";
+import Hero from "@/module/hero";
 import Dining from "./dining/dining";
 import ExploreWellnessAndSpa from "./about_wellness/about_wellness";
 
 const Home = () => {
   return (
     <>
-      <Hero />
+      <Hero
+        forFrontPage={true}
+        title="<span>Your luxury Holiday </span> <span>Home in Malnad</span>"
+      />
       <AboutIntro />
       <Facilities />
       <Dining />

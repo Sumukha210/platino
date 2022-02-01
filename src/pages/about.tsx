@@ -1,13 +1,11 @@
-import { gsap, Expo } from "gsap";
-import React, { useEffect, useRef } from "react";
+import Hero from "@/module/hero";
+import React from "react";
 
 const About = () => {
-  const title = useRef(null);
-
   return (
-    <div ref={title} style={{ background: "lightgreen" }}>
-      <h1>About</h1>
-    </div>
+    <>
+      <Hero title="<span>Learn more</span> <span>About us</span>" />
+    </>
   );
 };
 

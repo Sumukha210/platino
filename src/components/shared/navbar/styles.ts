@@ -6,6 +6,10 @@ export const Nav = styled.nav`
   left: 0%;
   width: 100%;
 
+  @media (max-width: 991.98px) {
+    padding: 20px 0;
+  }
+
   .navbar__menu {
     display: flex;
     justify-content: space-between;
@@ -15,17 +19,16 @@ export const Nav = styled.nav`
     svg {
       height: 24px;
       width: 24px;
-      vertical-align: bottom;
     }
 
     .menu span,
     .logo span,
-    .bookNow span {
+    .bookNow > span {
       cursor: pointer;
     }
 
     .menu span:last-child,
-    .bookNow span:first-child {
+    .bookNow > span:first-child {
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -33,13 +36,21 @@ export const Nav = styled.nav`
     }
 
     .menu span:first-child,
-    .bookNow span:first-child {
+    .bookNow > span:first-child {
       margin-right: 10px;
+
+      @media (max-width: 575.98px) {
+        margin-right: 6px;
+      }
     }
 
     .menu {
       position: relative;
       z-index: 10001;
+
+      svg {
+        vertical-align: bottom;
+      }
 
       span {
         &:last-child {
@@ -51,8 +62,27 @@ export const Nav = styled.nav`
     }
 
     .bookNow {
-      span:first-child {
+      & > span:first-child {
         display: inline-block;
+
+        span:first-child {
+          margin-right: 6px;
+        }
+
+        @media (max-width: 575.98px) {
+          span {
+            display: block;
+            font-weight: 300;
+          }
+        }
+      }
+
+      & > span:last-child {
+        svg {
+          @media (min-width: 575.98px) {
+            vertical-align: bottom;
+          }
+        }
       }
 
       &:hover {
