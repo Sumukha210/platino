@@ -99,7 +99,10 @@ export const NavWrapper = styled.div`
 
   background-color: var(--secondary-400);
   display: grid;
-  grid-template-columns: 1fr 0.7fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 0.7fr;
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -128,16 +131,13 @@ export const RightSide = styled.div<RightSideType>`
     color: var(--light-color);
   }
 
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-    url(${props => props.background});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  img {
-    height: 100vh !important;
+  @media (min-width: 768px) {
+    height: 100vh;
     width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+      url(${props => props.background});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 `;

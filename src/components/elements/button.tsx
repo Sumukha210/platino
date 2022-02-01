@@ -40,6 +40,11 @@ const CustomBtn = styled.button<CustomBtnProps>`
   transition: all 0.4s ease-in;
   display: inline-block;
 
+  @media (max-width: 767.98px) {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.8rem;
+  }
+
   &::before {
     content: "";
     position: absolute;

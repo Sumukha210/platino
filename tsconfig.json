@@ -32,6 +32,9 @@
       "@/shared/*": [
         "./src/components/shared/*"
       ],
+      "@/utils/*": [
+        "./src/components/utils/*"
+      ],
       "@/assets/*": [
         "./src/assets/*"
       ],

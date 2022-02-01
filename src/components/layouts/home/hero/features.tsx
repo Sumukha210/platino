@@ -36,6 +36,10 @@ const Container = styled.div`
   display: flex;
   margin-top: 3rem;
 
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+
   .feature {
     display: flex;
     align-items: center;

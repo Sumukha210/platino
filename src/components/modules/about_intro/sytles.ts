@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
     line-height: 36px;
     letter-spacing: 0.42em;
     opacity: 0.8;
+
+    @media (max-width: 767.98px) {
+      font-size: 10px;
+    }
   }
 
   .title {
@@ -25,6 +29,14 @@ export const Wrapper = styled.div`
     opacity: 0.4;
     color: var(--primary-300);
     margin-left: 3rem;
+
+    @media (max-width: 767.98px) {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-left: 0px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
   }
 
   .para {
@@ -33,6 +45,12 @@ export const Wrapper = styled.div`
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 42px;
+
+    @media (max-width: 767.98px) {
+      font-size: 1.1rem;
+      line-height: 34px;
+      margin: 2rem 0;
+    }
   }
 
   .btnContainer {

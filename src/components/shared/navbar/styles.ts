@@ -40,6 +40,14 @@ export const Nav = styled.nav`
     .menu {
       position: relative;
       z-index: 10001;
+
+      span {
+        &:last-child {
+          @media (max-width: 767.98px) {
+            display: none;
+          }
+        }
+      }
     }
 
     .bookNow {
@@ -52,8 +60,13 @@ export const Nav = styled.nav`
           transform: translateX(-10px);
         }
       }
+
       span {
         transition: transform 0.3s ease-in-out;
+
+        @media (max-width: 767.98px) {
+          font-size: 0.9rem;
+        }
       }
     }
 
@@ -68,6 +81,11 @@ export const Nav = styled.nav`
           font-weight: bold;
           font-size: 3rem;
           line-height: 64px;
+
+          @media (max-width: 767.98px) {
+            font-size: 1.5rem;
+            line-height: 32px;
+          }
         }
 
         &:last-child {
