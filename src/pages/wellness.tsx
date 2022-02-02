@@ -1,10 +1,15 @@
 import React from "react";
+import Hero from "@/module/hero";
+import bannerImg from "@/assets/images/wellness.jpg";
 
 const Wellness = () => {
   return (
-    <div>
-      <h1 className="heading-1">Wellness</h1>
-    </div>
+    <>
+      <Hero
+        bannerImg={bannerImg}
+        title="<span>Find Rest &</span> <span>Relaxation</span>"
+      />
+    </>
   );
 };
 

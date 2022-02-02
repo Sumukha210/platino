@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import bannerImg from "@/assets/images/banner.jpg";
+import { bannerProp } from ".";
 
-export const Banner = styled.div`
+export const Banner = styled.div<bannerProp>`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-    url(${bannerImg.src});
+    url(${props => props.bannerImg.src});
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: cover;

@@ -6,31 +6,31 @@ import diningImg from "@/assets/images/dining.jpg";
 import wellnessImg from "@/assets/images/wellness.jpg";
 import pricingImg from "@/assets/images/pricing.jpg";
 import contactImg from "@/assets/images/contact.jpg";
-import NextImg from "next/image";
-import { gsap, Expo } from "gsap";
+import { useRouter } from "next/router";
 
 interface navMenuOptionsType {
   name: string;
   img: StaticImageData;
-  isSelected: boolean;
+  path: string;
 }
 
 const navMenuOptions: navMenuOptionsType[] = [
-  { name: "Home", img: homeImg, isSelected: true },
-  { name: "About", img: aboutImg, isSelected: true },
-  { name: "Dining", img: diningImg, isSelected: true },
-  { name: "Wellness", img: wellnessImg, isSelected: true },
-  { name: "Pricing", img: pricingImg, isSelected: true },
-  { name: "Contact us", img: contactImg, isSelected: true },
+  { name: "Home", img: homeImg, path: "/" },
+  { name: "About", img: aboutImg, path: "/about" },
+  { name: "Dining", img: diningImg, path: "/dining" },
+  { name: "Wellness", img: wellnessImg, path: "/wellness" },
+  { name: "Pricing", img: pricingImg, path: "/pricing" },
+  { name: "Contact us", img: contactImg, path: "/contact" },
 ];
 
 interface navMenuType {
-  menuOpen: boolean;
+  closeMenu: () => void;
 }
 
-const NavMenu: React.FC<navMenuType> = ({ menuOpen }) => {
+const NavMenu: React.FC<navMenuType> = ({ closeMenu }) => {
   const [currentImg, setCurrentImg] = useState(navMenuOptions[0].img);
   const wrapperRef = useRef(null);
+  const router = useRouter();
 
   const handleMouseMove = (e: any, item: any) => {
     const targetContent = e.target?.textContent;
@@ -39,26 +39,6 @@ const NavMenu: React.FC<navMenuType> = ({ menuOpen }) => {
       setCurrentImg(() => item.img);
     }
   };
-  // const tl = useRef<gsap.core.Timeline>();
-
-  // useEffect(() => {
-  //   tl.current = gsap.timeline({ defaults: { duration: 1.1 }, paused: true });
-
-  //   tl.current.paused();
-  //   tl.current.to(wrapperRef.current, {
-  //     x: 0,
-  //     duration: 0.7,
-  //     ease: "Expo.in",
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   if (menuOpen) {
-  //     tl.current!.play();
-  //   } else {
-  //     tl.current!.reverse();
-  //   }
-  // }, [menuOpen]);
 
   return (
     <NavWrapper ref={wrapperRef} id="navMenu">
@@ -67,7 +47,11 @@ const NavMenu: React.FC<navMenuType> = ({ menuOpen }) => {
           <h4
             key={item.name}
             className="heading-4 menuName"
-            onClick={e => handleMouseMove(e, item)}>
+            onMouseEnter={e => handleMouseMove(e, item)}
+            onClick={() => {
+              router.push(item.path);
+              closeMenu();
+            }}>
             {item.name}
           </h4>
         ))}

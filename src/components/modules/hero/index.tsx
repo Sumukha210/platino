@@ -3,24 +3,32 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import Button from "@/element/button";
 import Features from "./features";
 import { gsap } from "gsap/dist/gsap";
-import { heroAnimation } from "./animation";
+import { useHeroAnimation } from "./animation";
 import { Banner, Content } from "./styles";
 
-interface heroTypes {
+export interface bannerProp {
+  bannerImg: StaticImageData;
+}
+
+interface heroTypes extends bannerProp {
   forFrontPage?: boolean;
   title: string;
 }
 
-const Hero: React.FC<heroTypes> = ({ forFrontPage = false, title }) => {
+const Hero: React.FC<heroTypes> = ({
+  forFrontPage = false,
+  title,
+  bannerImg,
+}) => {
   const bannerRef = useRef(null);
   const tl = useRef<gsap.core.Timeline>();
   const children = gsap.utils.selector(bannerRef);
 
-  heroAnimation(tl, children, forFrontPage);
+  useHeroAnimation(tl, children, forFrontPage);
 
   return (
     <>
-      <Banner ref={bannerRef} id="hero">
+      <Banner ref={bannerRef} id="hero" bannerImg={bannerImg}>
         <div className="container">
           <Content>
             <div className="row justify-center">

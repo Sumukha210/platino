@@ -29,7 +29,7 @@ const ExploreWellnessAndSpa = () => {
       duration: 1.5,
       ease: "power1.in",
     });
-  }, []);
+  }, [children]);
 
   return (
     <Wrapper ref={wrapperRef}>
