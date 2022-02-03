@@ -9,11 +9,17 @@ interface CustomBtnProps {
 interface btnType extends CustomBtnProps {
   name: string;
   Icon?: IconType;
+  submitType?: boolean;
 }
 
-const Button: React.FC<btnType> = ({ name, Icon, isDarkBtn = true }) => {
+const Button: React.FC<btnType> = ({
+  name,
+  Icon,
+  isDarkBtn = true,
+  submitType = false,
+}) => {
   return (
-    <CustomBtn isDarkBtn={isDarkBtn}>
+    <CustomBtn isDarkBtn={isDarkBtn} type={submitType ? "submit" : "button"}>
       <span>{name}</span>
       {Icon && (
         <span>
@@ -65,7 +71,9 @@ const CustomBtn = styled.button<CustomBtnProps>`
       width: 100%;
     }
 
-    color: var(--secondary-400);
+    color: var(
+      ${props => (props.isDarkBtn ? "--light-color" : "--dark-color")}
+    );
     border-color: var(--primary-300);
   }
 

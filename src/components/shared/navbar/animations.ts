@@ -18,7 +18,6 @@ export const useNavbarMenuAnimation = ({
 }: navbarMenuAnimationProps) => {
   useLayoutEffect(() => {
     tl.current = gsap.timeline({ defaults: { duration: 1.1 }, paused: true });
-    console.log("pre render part 1");
 
     if (firstTime) {
       return;
@@ -43,8 +42,8 @@ export const useNavbarMenuAnimation = ({
         children("#navMenu"),
         {
           x: 0,
-          duration: 0.7,
-          ease: "Expo.in",
+          duration: 0.8,
+          ease: "Expo.inOut",
         },
         "-=0.3"
       )

@@ -126,7 +126,10 @@ $caption: (
 
       // only to caption class
       @if $isCaption {
-        letter-spacing: 0.32rem;
+        // letter-spacing: 0.32rem;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        font-weight: 600;
       }
     }
   }
