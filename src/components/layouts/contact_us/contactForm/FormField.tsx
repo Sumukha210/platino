@@ -68,4 +68,8 @@ export default FormField;
 
 const FormWrapper = styled.div`
   margin-top: 2rem;
+
+  button {
+    margin-top: 1rem;
+  }
 `;
