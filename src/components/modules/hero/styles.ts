@@ -4,7 +4,7 @@ import { bannerProp } from ".";
 export const Banner = styled.div<bannerProp>`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
     url(${props => props.bannerImg.src});
-  background-position: 100% 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
