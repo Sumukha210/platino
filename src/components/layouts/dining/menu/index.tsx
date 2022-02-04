@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import drinkMenuImg from "@/assets/images/home.jpg";
-import desertMenuImg from "@/assets/images/about.jpg";
-import pizzaMenuImg from "@/assets/images/wellness.jpg";
-import dinnerMenuImg from "@/assets/images/pricing.jpg";
-import happyHourMenuImg from "@/assets/images/contact.jpg";
 import NextImg from "next/image";
 import { gsap } from "gsap";
 import useLayoutEffect from "@/utils/useLayoutEffect";
 import { Wrapper } from "./styles";
+import drinkMenuImg from "@/assets/images/drinks.jpg";
+import desertMenuImg from "@/assets/images/dessert.jpg";
+import pizzaMenuImg from "@/assets/images/pizza.jpg";
+import dinnerMenuImg from "@/assets/images/dinner.jpg";
+import happyHourMenuImg from "@/assets/images/wine.jpg";
 
 interface menuNamesTypes {
   name: string;
@@ -16,10 +16,10 @@ interface menuNamesTypes {
 
 const menuNames: menuNamesTypes[] = [
   { name: "Happy <br/> Hour", imgSrc: happyHourMenuImg },
-  { name: "Drink <br/> Menu", imgSrc: drinkMenuImg },
   { name: "Desert <br/> Menu", imgSrc: desertMenuImg },
   { name: "Pizza <br/> Menu", imgSrc: pizzaMenuImg },
   { name: "Dinner <br/> Menu", imgSrc: dinnerMenuImg },
+  { name: "Drink <br/> Menu", imgSrc: drinkMenuImg },
 ];
 
 const Menu = () => {
@@ -35,9 +35,9 @@ const Menu = () => {
         },
         {
           repeat: -1,
-          duration: gsap.utils.random(12, 16),
-          ease: "none",
-          y: -60,
+          duration: gsap.utils.random(10, 15),
+          ease: "Power4.easeInOut",
+          y: gsap.utils.random(-40, -65),
           yoyo: true,
           yoyoEase: "none",
         }

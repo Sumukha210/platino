@@ -3,7 +3,7 @@ import React from "react";
 import bannerImg from "@/assets/images/dining-2.jpg";
 import Intro from "@/layout/dining/intro";
 import Menu from "@/layout/dining/menu";
-import BookNow from "@/layout/dining/bookNow";
+import BookNowSection from "@/layout/dining/bookNowSection";
 
 const Dining = () => {
   return (
@@ -11,7 +11,7 @@ const Dining = () => {
       <Hero bannerImg={bannerImg} title="<span>Dine with us</span>" />
       <Intro />
       <Menu />
-      <BookNow />
+      <BookNowSection />
     </>
   );
 };

@@ -1,10 +1,9 @@
 import Button from "@/element/button";
 import React from "react";
-import styled from "styled-components";
 
-const BookNow = () => {
+const Info = () => {
   return (
-    <Wrapper>
+    <>
       <div className="container">
         <div className="row justify-center">
           <div className="col-lg-8">
@@ -24,24 +23,8 @@ const BookNow = () => {
           </div>
         </div>
       </div>
-    </Wrapper>
+    </>
   );
 };
 
-export default BookNow;
-
-export const Wrapper = styled.div`
-  background: var(--secondary-400);
-  margin-top: -300px;
-  padding-top: 380px;
-  padding-bottom: 80px;
-
-  .content {
-    text-align: center;
-    color: var(--light-color);
-
-    p {
-      margin: 2rem 0;
-    }
-  }
-`;
+export default Info;

@@ -13,6 +13,13 @@ export const Wrapper = styled.div`
   .card {
     height: 500px;
     position: relative;
+    cursor: pointer;
+
+    &:nth-of-type(4) {
+      img {
+        object-position: right !important;
+      }
+    }
 
     @media (max-width: 767px) {
       margin-bottom: 2rem;
@@ -43,7 +50,7 @@ export const Wrapper = styled.div`
       left: 0%;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
       transition: all 0.5s ease-in-out;
     }
 
