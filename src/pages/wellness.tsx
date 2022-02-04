@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "@/module/hero";
-import bannerImg from "@/assets/images/wellness.jpg";
+import bannerImg from "@/assets/images/outdoor-pool.jpg";
+import Intro from "@/layout/wellness/intro";
 
 const Wellness = () => {
   return (
@@ -9,6 +10,7 @@ const Wellness = () => {
         bannerImg={bannerImg}
         title="<span>Find Rest &</span> <span>Relaxation</span>"
       />
+      <Intro />
     </>
   );
 };

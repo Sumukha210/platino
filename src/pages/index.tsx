@@ -1,11 +1,10 @@
 import React from "react";
 import bannerImg from "@/assets/images/banner.jpg";
+import Hero from "@/module/hero";
 import AboutIntro from "@/module/about_intro/aboutIntro";
 import Facilities from "@/module/facilities/facilities";
-import Hero from "@/module/hero";
-import WellnessSlider from "@/module/wellness_slider/wellnessSlider";
 import Dining from "@/layout/home/dining/dining";
-// import ExploreWellnessAndSpa from "./about_wellness/about_wellness";
+import Wellness from "@/layout/home/wellness";
 
 const Home = () => {
   return (
@@ -18,8 +17,7 @@ const Home = () => {
       <AboutIntro />
       <Facilities />
       <Dining />
-      {/* <ExploreWellnessAndSpa /> */}
-      <WellnessSlider />
+      <Wellness />
     </>
   );
 };

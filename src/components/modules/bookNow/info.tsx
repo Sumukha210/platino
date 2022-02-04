@@ -6,7 +6,7 @@ const Info = () => {
     <>
       <div className="container">
         <div className="row justify-center">
-          <div className="col-lg-8">
+          <div className="col-md-11 col-lg-8">
             <div className="content">
               <h4 className="heading-3 bold">
                 Are you ready <br /> to enjoy with us ?
