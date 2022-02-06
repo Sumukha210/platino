@@ -2,23 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    height: 100%;
-    background-color: var(--secondary-300);
-    z-index: -1;
-
-    width: 30%;
-
-    @media (max-width: 991.98px) {
-      height: 400px;
-      width: 100%;
-    }
-  }
+  /* background-color: var(--secondary-100); */
 
   .row {
     align-items: center;
@@ -57,7 +41,8 @@ export const Wrapper = styled.div`
       }
 
       .options {
-        margin: 2rem 0;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
 
         h6 {
           position: relative;
