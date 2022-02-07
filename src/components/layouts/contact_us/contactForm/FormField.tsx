@@ -58,7 +58,7 @@ const FormField = () => {
           />
         ))}
 
-        <Button name="Submit" submitType={true} />
+        <Button onClickHandler={() => {}} name="Submit" submitType={true} />
       </form>
     </FormWrapper>
   );

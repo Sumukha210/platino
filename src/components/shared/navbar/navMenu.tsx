@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import homeImg from "@/assets/images/home.jpg";
-import aboutImg from "@/assets/images/about.jpg";
+import homeImg from "@/assets/images/banner-sm.jpg";
+import aboutImg from "@/assets/images/about-md.jpg";
 import diningImg from "@/assets/images/dining.jpg";
 import wellnessImg from "@/assets/images/wellness.jpg";
 import pricingImg from "@/assets/images/pricing.jpg";
-import contactImg from "@/assets/images/contact.jpg";
+import contactImg from "@/assets/images/contact-sm.jpg";
 import { useRouter } from "next/router";
 
 interface navMenuOptionsType {

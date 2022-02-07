@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import React, { useMemo } from "react";
 import styled from "styled-components";
-// import Map from "../Map";
 import PersonalInfo from "./personalInfo";
 
 const Address = () => {
@@ -44,6 +43,10 @@ export const Wrapper = styled.div`
 
   .left {
     text-align: right;
+
+    @media (max-width: 575.98px) {
+      margin-right: 2rem;
+    }
   }
 
   .group {
