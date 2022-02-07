@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React, { useMemo } from "react";
 import styled from "styled-components";
-import PersonalInfo from "./personalInfo";
+import PersonalInfo from "./PersonalInfo";
 
 const Address = () => {
   const Map = useMemo(
@@ -46,26 +46,6 @@ export const Wrapper = styled.div`
 
     @media (max-width: 575.98px) {
       margin-right: 2rem;
-    }
-  }
-
-  .group {
-    &:first-child {
-      margin-bottom: 2rem;
-    }
-
-    h4 {
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-    }
-    h6 {
-      font-weight: 400;
-      span {
-        display: block;
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
-      }
     }
   }
 `;

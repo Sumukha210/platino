@@ -1,4 +1,4 @@
-import Button from "@/element/button";
+import Button from "@/element/Button";
 import React from "react";
 import { FieldError, SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";

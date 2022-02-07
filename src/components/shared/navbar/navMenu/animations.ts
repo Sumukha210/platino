@@ -18,11 +18,9 @@ export const useNavbarMenuAnimation = ({
 }: navbarMenuAnimationProps) => {
   useLayoutEffect(() => {
     tl.current = gsap.timeline({ defaults: { duration: 1.1 }, paused: true });
-
     if (firstTime) {
       return;
     }
-
     tl.current!.pause();
     tl.current!.to(
       [
@@ -37,15 +35,19 @@ export const useNavbarMenuAnimation = ({
         ease: "power1.in",
       }
     )
-
+      .to(children("#navMenu"), {
+        width: "20%",
+        duration: 1.2,
+        ease: "Power1.easeIn",
+      })
       .to(
         children("#navMenu"),
         {
-          x: 0,
-          duration: 0.8,
-          ease: "Expo.inOut",
+          width: "100%",
+          duration: 0.7,
+          ease: "Power1.easeOut",
         },
-        "-=0.3"
+        "-=0.4"
       )
       .from(children(".menuName"), {
         stagger: 0.05,
@@ -54,13 +56,12 @@ export const useNavbarMenuAnimation = ({
         ease: "Power1.ease",
       });
   }, [firstTime]);
-
   useLayoutEffect(() => {
     setFirstTime(false);
     if (menuOpen) {
       tl.current!.play();
     } else {
-      tl.current!.reverse(1.5);
+      tl.current!.reverse(1.9);
     }
   }, [menuOpen]);
 };

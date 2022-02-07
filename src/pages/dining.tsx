@@ -1,7 +1,7 @@
 import Hero from "@/module/hero";
 import React from "react";
-import bannerImg from "@/assets/images/wellness.jpg";
-import Intro from "@/layout/dining/intro";
+import bannerImg from "@/assets/images/dining-md.jpg";
+import Intro from "@/layout/dining/Intro";
 import Menu from "@/layout/dining/menu";
 import BookNowSection from "@/layout/dining/bookNowSection";
 

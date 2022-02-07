@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import { RiMenu2Fill } from "react-icons/ri";
 import { BsChevronRight } from "react-icons/bs";
-import { Nav } from "./styles";
+import { Nav } from "./navbarStyles";
 import NavMenu from "./navMenu";
 import { gsap } from "gsap/dist/gsap";
-import { useNavbarMenuAnimation } from "./animations";
+import { useNavbarMenuAnimation } from "./navMenu/animations";
 import { useRouter } from "next/router";
 
 const Navbar = () => {

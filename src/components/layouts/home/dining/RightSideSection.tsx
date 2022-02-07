@@ -1,4 +1,4 @@
-import Button from "@/element/button";
+import Button from "@/element/Button";
 import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
 import { menuNames } from "./utils";

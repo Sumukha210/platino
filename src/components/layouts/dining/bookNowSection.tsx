@@ -7,24 +7,26 @@ import drinkMenuImg from "@/assets/images/drinks.jpg";
 import desertMenuImg from "@/assets/images/dessert.jpg";
 import pizzaMenuImg from "@/assets/images/pizza.jpg";
 import dinnerMenuImg from "@/assets/images/dinner.jpg";
-import happyHourMenuImg from "@/assets/images/wine.jpg";
-import homeImg from "@/assets/images/home.jpg";
-import aboutImg from "@/assets/images/about.jpg";
-import wellnessMenuImg from "@/assets/images/wellness.jpg";
-import pricingMenuImg from "@/assets/images/pricing.jpg";
+import food1Img from "@/assets/images/wine.jpg";
+import food2Img from "@/assets/images/food-1-sm.jpg";
+import food3Img from "@/assets/images/food-2-sm.jpg";
+import food4Img from "@/assets/images/food-3-sm.jpg";
+import food5Img from "@/assets/images/food-4-sm.jpg";
+import food6Img from "@/assets/images/food-5-sm.jpg";
 import useIsomorphicLayoutEffect from "@/utils/useLayoutEffect";
 import { scrollingTextAnimation } from "@/utils/scrollingTextAnimation";
 
 const images = [
-  drinkMenuImg,
+  food6Img,
+  food2Img,
   desertMenuImg,
+  food3Img,
   pizzaMenuImg,
+  food4Img,
+  food1Img,
   dinnerMenuImg,
-  happyHourMenuImg,
-  homeImg,
-  aboutImg,
-  wellnessMenuImg,
-  pricingMenuImg,
+  food5Img,
+  drinkMenuImg,
 ];
 
 const BookNowSection = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Info from "./info";
-import Slider from "./slider";
+import Info from "./Info";
+import Slider from "./Slider";
 import { sliderImagesType } from "./types";
 
 const BookNow: React.FC<sliderImagesType> = ({ images }) => {

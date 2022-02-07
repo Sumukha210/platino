@@ -1,7 +1,7 @@
-import Button from "@/element/button";
+import Button from "@/element/Button";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { Wrapper } from "./sytles";
+import { Wrapper } from "./styles";
 import { aboutIntroData, useAboutIntroAnimation } from "./utils";
 
 const AboutIntro = () => {

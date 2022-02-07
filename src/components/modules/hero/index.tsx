@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
-import Button from "@/element/button";
-import Features from "./features";
+import Button from "@/element/Button";
+import Features from "./Features";
 import { gsap } from "gsap/dist/gsap";
 import { useHeroAnimation } from "./animation";
 import { Banner, Content } from "./styles";

@@ -1,4 +1,4 @@
-import Navbar from "@/shared/navbar/navbar";
+import Navbar from "@/shared/navbar/Navbar";
 import type { AppProps } from "next/app";
 import "../styles/style.scss";
 // import "bootstrap/scss/grid";

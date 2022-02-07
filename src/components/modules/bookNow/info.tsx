@@ -1,4 +1,4 @@
-import Button from "@/element/button";
+import Button from "@/element/Button";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -8,7 +8,7 @@ const Info = () => {
   return (
     <>
       <div className="custom-container">
-        <div className="row justify-center">
+        <div className="row justify-content-center">
           <div className="col-md-11 col-lg-8">
             <div className="content">
               <h4 className="heading-3 bold heading">

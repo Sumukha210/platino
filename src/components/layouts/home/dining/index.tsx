@@ -3,7 +3,7 @@ import NextImg from "next/image";
 import { Wrapper } from "./styles";
 import useIsomorphicLayoutEffect from "@/utils/useLayoutEffect";
 import { gsap } from "gsap";
-import RightSection from "./rightSection";
+import RightSection from "./RightSideSection";
 import { menuNames } from "./utils";
 
 const Dining = () => {
