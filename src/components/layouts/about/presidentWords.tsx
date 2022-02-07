@@ -7,14 +7,14 @@ const PresidentWords = () => {
   const { imgSrc, designation, quote, name } = founders_team_info[0];
 
   return (
-    <Wrapper className="margin-top">
+    <Wrapper className="margin-top component-inner-gap">
       <div className="custom-container">
-        <div className="row justify-center">
-          <div className="col-lg-10">
-            <div className="row gap-3 align-center">
-              <div className="col-lg-6">
+        <div className="row justify-content-center">
+          <div className="col-md-9 col-lg-10">
+            <div className="row gx-lg-5 align-items-center">
+              <div className="col-lg-5">
                 <div className="left">
-                  <NextImg src={imgSrc} />
+                  <NextImg src={imgSrc} objectFit="cover" placeholder="blur" />
                 </div>
               </div>
               <div className="col-lg-6">
@@ -35,9 +35,19 @@ const PresidentWords = () => {
 export default PresidentWords;
 
 const Wrapper = styled.div`
+  background-color: var(--secondary-200);
+
   .left {
-    img {
-      min-height: 520px !important;
+    @media (max-width: 991.98px) {
+      margin-bottom: 1rem;
+    }
+    & > span {
+      height: 650px !important;
+      width: 100% !important;
+
+      @media (max-width: 575.98px) {
+        height: 500px !important;
+      }
     }
   }
 
@@ -48,7 +58,7 @@ const Wrapper = styled.div`
     }
 
     p {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
   }
 `;

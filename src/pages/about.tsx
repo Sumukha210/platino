@@ -4,6 +4,7 @@ import Hero from "@/module/hero";
 import AboutIntro from "@/module/about_intro/aboutIntro";
 import Founders_And_Team from "@/layout/about/founders/founders_and_team";
 import PresidentWords from "@/layout/about/presidentWords";
+import OurPromises from "@/layout/about/ourPromises";
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
       <AboutIntro />
       <Founders_And_Team />
       <PresidentWords />
+      <OurPromises />
     </>
   );
 };

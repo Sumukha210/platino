@@ -1,6 +1,6 @@
-import presidentImg from "@/assets/images/about.jpg";
-import managerImg from "@/assets/images/wellness.jpg";
-import chefImg from "@/assets/images/home.jpg";
+import presidentImg from "@/assets/images/president.jpg";
+import managerImg from "@/assets/images/manager.jpg";
+import chefImg from "@/assets/images/chef.jpg";
 
 interface founders_team_types {
   designation: string;
@@ -24,7 +24,7 @@ export const founders_team_info: founders_team_types[] = [
   },
   {
     designation: "Main Chef",
-    name: "Mr. Nalamaharaja",
+    name: "Mr. Naren",
     imgSrc: chefImg,
   },
 ];

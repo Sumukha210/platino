@@ -7,14 +7,14 @@ const Founders_And_Team = () => {
   return (
     <Wrapper className="margin-top">
       <div className="custom-container">
-        <div className="row justify-center">
-          <div className="col-lg-10">
+        <div className="row justify-content-center">
+          <div className="col-md-9 col-lg-10">
             <div className="content">
               <h2 className="title heading-3">
                 Founders & <br /> Team
               </h2>
 
-              <div className="row gap-2">
+              <div className="row gx-4">
                 {founders_team_info.map(
                   ({ name, designation, imgSrc }, num) => (
                     <div className="col-lg-4" key={num}>
@@ -49,6 +49,14 @@ const Wrapper = styled.div`
   }
 
   .card {
+    @media (max-width: 991.98px) {
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 2rem;
+    }
+
     & > span {
       min-width: 100%;
     }
