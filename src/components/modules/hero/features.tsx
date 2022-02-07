@@ -17,7 +17,7 @@ const features: featuresType[] = [
 
 const Features = () => {
   return (
-    <Container id="features">
+    <Wrapper id="features">
       {features.map(({ name, Icon }, key) => (
         <div key={key} className="feature">
           <span>{<Icon />}</span>
@@ -26,13 +26,13 @@ const Features = () => {
             dangerouslySetInnerHTML={{ __html: name }}></span>
         </div>
       ))}
-    </Container>
+    </Wrapper>
   );
 };
 
 export default Features;
 
-const Container = styled.div`
+const Wrapper = styled.div`
   display: flex;
   margin-top: 3rem;
 

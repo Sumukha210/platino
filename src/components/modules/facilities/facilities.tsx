@@ -23,9 +23,9 @@ const facilities: facilitiesType[] = [
 const Facilities = () => {
   return (
     <Wrapper>
-      <div className="container component-inner-gap">
-        <div className="row justify-center">
-          <div className="col-xl-10">
+      <div className="custom-container component-inner-gap">
+        <div className="row justify-content-center">
+          <div className="col-md-10">
             <div className="row">
               <div className="col-lg-5">
                 <div className="left">
@@ -43,7 +43,13 @@ const Facilities = () => {
                 <div className="right">
                   <div className="row">
                     {facilities.map(({ name, Icon }, key) => (
-                      <div className="col-lg-6 feature" key={key}>
+                      <div
+                        className={`col-6 feature ${
+                          (key + 1 === facilities.length ||
+                            key + 1 === facilities.length - 1) &&
+                          "mb-0"
+                        }`}
+                        key={key}>
                         <span>{<Icon />}</span>
                         <span
                           className="sub-title-3"

@@ -47,7 +47,7 @@ const Menu = () => {
 
   return (
     <Wrapper ref={WrapperRef} className="margin-top">
-      <div className="imgContainer">
+      <div className="imgcustom-container">
         {menuNames.map(({ name, imgSrc }, num) => (
           <div className="card" key={num}>
             <div className="card__header">

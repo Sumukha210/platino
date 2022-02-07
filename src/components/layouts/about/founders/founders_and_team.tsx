@@ -6,7 +6,7 @@ import NextImg from "next/image";
 const Founders_And_Team = () => {
   return (
     <Wrapper className="margin-top">
-      <div className="container">
+      <div className="custom-container">
         <div className="row justify-center">
           <div className="col-lg-10">
             <div className="content">

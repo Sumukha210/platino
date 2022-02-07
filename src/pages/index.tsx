@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImg from "@/assets/images/banner.jpg";
+import bannerImg from "@/assets/images/banner-md.jpg";
 import Hero from "@/module/hero";
 import AboutIntro from "@/module/about_intro/aboutIntro";
 import Facilities from "@/module/facilities/facilities";

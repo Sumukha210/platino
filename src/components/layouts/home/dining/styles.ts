@@ -10,6 +10,15 @@ export const Wrapper = styled.div`
     .left {
       & > span {
         height: 700px !important;
+
+        @media (max-width: 991.98px) {
+          height: 550px !important;
+          width: 100% !important;
+        }
+
+        @media (max-width: 575.98px) {
+          height: 430px !important;
+        }
       }
       img {
         height: 100% !important;
@@ -24,16 +33,9 @@ export const Wrapper = styled.div`
 
     .right {
       color: var(--dark-color);
+
       @media (max-width: 991.98px) {
-        width: 70%;
-
-        .caption {
-          margin-top: 2rem;
-        }
-      }
-
-      @media (max-width: 575.98px) {
-        width: 95%;
+        margin-top: 2rem;
       }
 
       .sub-title {

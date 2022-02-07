@@ -4,7 +4,8 @@
 @import "../utils/breakpoints";
 @import "../utils/typography";
 @import "../utils/container";
-@import "../utils/grid";
+// @import "../utils/grid";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 * {
   margin: 0;
@@ -26,3 +27,7 @@ body {
 .ml-auto {
   margin-left: auto;
 }
+
+// p {
+//   margin-bottom: 0px;
+// }

@@ -2,40 +2,43 @@ import Button from "@/element/button";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Wrapper } from "./sytles";
+import { aboutIntroData, useAboutIntroAnimation } from "./utils";
 
 const AboutIntro = () => {
+  const { caption, title, subtitle, para } = aboutIntroData;
+  const { wrapperRef, router } = useAboutIntroAnimation();
+
   return (
-    <Wrapper className="margin-top">
-      <div className="container">
+    <Wrapper className="margin-top" ref={wrapperRef}>
+      <div className="custom-container">
         <div className="header">
-          <div className="row justify-center">
-            <div className="col-xl-10">
-              <h6 className="caption">All forms of hospitality</h6>
-              <h1 className="title heading-1">A widespread Resort</h1>
-              <h5 className="subtitle">In the heart of malnad</h5>
+          <div className="row justify-content-center">
+            <div className="col-md-10">
+              <h6 className="caption">{caption}</h6>
+              <h1 className="title heading-1">{title}</h1>
+              <h5 className="subtitle">{subtitle}</h5>
             </div>
           </div>
         </div>
 
-        <div className="row justify-center">
-          <div className="col-xl-8">
-            <p className="para">
-              Welcome to the legendary Platino Restarant & Hotel. Surrounded by
-              the pristine beauty of mother nature, the Platino offers unique
-              accommodations with laid-back luxury, gracious hospitality,
-              superior dining, and one of the most iconic bars in Malnad. Since
-              1927, our hotel has created memories for generations of travelers,
-              create one for yourself with an unforgettable stay at the Platino!
-            </p>
+        <div className="row justify-content-center">
+          <div className="col-md-10 col-xl-8">
+            <p className="para">{para}</p>
           </div>
         </div>
 
-        <div className="btnContainer">
-          <Button name="Explore more" Icon={BsArrowRight} />
-        </div>
+        {router.asPath != "/about" && (
+          <div className="btncustom-container">
+            <Button
+              onClickHandler={() => router.push("/about")}
+              name="Explore more"
+              Icon={BsArrowRight}
+            />
+          </div>
+        )}
       </div>
 
-      <div className="videoContainer">
+      <div className="videocustom-container">
         <video autoPlay loop muted>
           <source src="/intro.mp4" />
         </video>

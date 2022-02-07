@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  .imgContainer {
+  .imgcustom-container {
     display: grid;
     grid-gap: 1.2rem;
 

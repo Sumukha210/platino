@@ -29,10 +29,10 @@ const Hero: React.FC<heroTypes> = ({
   return (
     <>
       <Banner ref={bannerRef} id="hero" bannerImg={bannerImg}>
-        <div className="container">
+        <div className="custom-container">
           <Content>
-            <div className="row justify-center">
-              <div className="col-xl-10">
+            <div className="row justify-content-center">
+              <div className="col-md-10">
                 <h1
                   className="title heading-2"
                   dangerouslySetInnerHTML={{ __html: title }}></h1>
@@ -40,6 +40,7 @@ const Hero: React.FC<heroTypes> = ({
                 {forFrontPage && (
                   <>
                     <Button
+                      onClickHandler={() => {}}
                       name="Watch Now"
                       Icon={AiFillPlayCircle}
                       isDarkBtn={false}

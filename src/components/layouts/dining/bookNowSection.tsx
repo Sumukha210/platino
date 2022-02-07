@@ -1,6 +1,7 @@
 import BookNow from "@/module/bookNow";
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { gsap } from "gsap";
 
 import drinkMenuImg from "@/assets/images/drinks.jpg";
 import desertMenuImg from "@/assets/images/dessert.jpg";
@@ -11,6 +12,8 @@ import homeImg from "@/assets/images/home.jpg";
 import aboutImg from "@/assets/images/about.jpg";
 import wellnessMenuImg from "@/assets/images/wellness.jpg";
 import pricingMenuImg from "@/assets/images/pricing.jpg";
+import useIsomorphicLayoutEffect from "@/utils/useLayoutEffect";
+import { scrollingTextAnimation } from "@/utils/scrollingTextAnimation";
 
 const images = [
   drinkMenuImg,
@@ -25,8 +28,22 @@ const images = [
 ];
 
 const BookNowSection = () => {
+  const wrapperRef = useRef(null);
+  const children = gsap.utils.selector(wrapperRef);
+
+  useIsomorphicLayoutEffect(() => {
+    scrollingTextAnimation({
+      trigger: children(".content"),
+      targets: [
+        children(".heading"),
+        children(".subtitle"),
+        children("button"),
+      ],
+    });
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper ref={wrapperRef}>
       <BookNow images={images} />
     </Wrapper>
   );

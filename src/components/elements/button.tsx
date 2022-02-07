@@ -10,6 +10,7 @@ interface btnType extends CustomBtnProps {
   name: string;
   Icon?: IconType;
   submitType?: boolean;
+  onClickHandler: () => void;
 }
 
 const Button: React.FC<btnType> = ({
@@ -17,9 +18,13 @@ const Button: React.FC<btnType> = ({
   Icon,
   isDarkBtn = true,
   submitType = false,
+  onClickHandler,
 }) => {
   return (
-    <CustomBtn isDarkBtn={isDarkBtn} type={submitType ? "submit" : "button"}>
+    <CustomBtn
+      isDarkBtn={isDarkBtn}
+      type={submitType ? "submit" : "button"}
+      onClick={onClickHandler}>
       <span>{name}</span>
       {Icon && (
         <span>

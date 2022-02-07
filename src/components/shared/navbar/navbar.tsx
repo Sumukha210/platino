@@ -5,12 +5,14 @@ import { Nav } from "./styles";
 import NavMenu from "./navMenu";
 import { gsap } from "gsap/dist/gsap";
 import { useNavbarMenuAnimation } from "./animations";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [firstTime, setFirstTime] = useState(true);
   const wrapperRef = useRef(null);
   const children = gsap.utils.selector(wrapperRef);
+  const router = useRouter();
 
   const tl = useRef<gsap.core.Timeline>();
 
@@ -29,7 +31,7 @@ const Navbar = () => {
       <NavMenu closeMenu={closeMenu} />
 
       <Nav>
-        <div className="container">
+        <div className="custom-container">
           <div className="navbar__menu">
             <div className="menu" onClick={handleMenu}>
               <span>
@@ -38,7 +40,7 @@ const Navbar = () => {
               <span>Menu</span>
             </div>
 
-            <div className="logo">
+            <div className="logo" onClick={() => router.push("/")}>
               <span>Platino</span>
               <span>Hotel - Restaurant</span>
             </div>

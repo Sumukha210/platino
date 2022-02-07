@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Intro = () => {
   return (
     <Wrapper className="margin-top">
-      <div className="container">
+      <div className="custom-container">
         <div className="row justify-center">
           <div className="col-md-10 col-lg-8">
             <h2 className="heading-3">

@@ -7,7 +7,7 @@ import FormField from "./FormField";
 const ContactForm = () => {
   return (
     <Wrapper className="margin-top">
-      <div className="container">
+      <div className="custom-container">
         <div className="row justify-center">
           <div className="col-lg-10">
             <div className="row gap-3 align-center">

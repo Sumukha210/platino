@@ -30,10 +30,13 @@ export const Wrapper = styled.div`
     color: var(--primary-300);
     margin-left: 3rem;
 
+    @media (max-width: 991.98px) {
+      margin-left: 0px;
+    }
+
     @media (max-width: 767.98px) {
       font-size: 12px;
       opacity: 0.7;
-      margin-left: 0px;
       font-weight: 600;
       margin-top: 1rem;
     }
@@ -46,6 +49,10 @@ export const Wrapper = styled.div`
     font-size: 1.5rem;
     line-height: 42px;
 
+    @media (max-width: 991.98px) {
+      margin: 3rem 0;
+    }
+
     @media (max-width: 767.98px) {
       font-size: 1.1rem;
       line-height: 34px;
@@ -53,11 +60,11 @@ export const Wrapper = styled.div`
     }
   }
 
-  .btnContainer {
+  .btncustom-container {
     text-align: center;
   }
 
-  .videoContainer {
+  .videocustom-container {
     height: 650px;
     width: 100vw;
     margin-top: 80px;

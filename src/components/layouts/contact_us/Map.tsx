@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { Mapcustom-container, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import iconUrl from "@/assets/images/marker-icon.png";
@@ -14,7 +14,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const Map = () => {
   return (
     <div className="Map my-4">
-      <MapContainer
+      <Mapcustom-container
         center={[14.3812, 75.1022]}
         zoom={12}
         scrollWheelZoom={true}
@@ -28,7 +28,7 @@ const Map = () => {
             <h2 className="font-weight-bold">Platino Resort</h2>
           </Popup>
         </Marker>
-      </MapContainer>
+      </Mapcustom-container>
     </div>
   );
 };

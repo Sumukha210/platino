@@ -9,9 +9,9 @@ const Wellness = () => {
   return (
     <Wrapper>
       <div className="header">
-        <div className="container">
-          <div className="row justify-center">
-            <div className="col-lg-10">
+        <div className="custom-container">
+          <div className="row justify-content-center">
+            <div className="col-md-10">
               <div className="row">
                 <div className="col-lg-7">
                   <h2 className="heading-3 bold">Wellness</h2>

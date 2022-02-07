@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImg from "@/assets/images/about.jpg";
+import bannerImg from "@/assets/images/about-md.jpg";
 import Hero from "@/module/hero";
 import AboutIntro from "@/module/about_intro/aboutIntro";
 import Founders_And_Team from "@/layout/about/founders/founders_and_team";

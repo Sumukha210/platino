@@ -24,7 +24,7 @@ const CarouselSlider: React.FC<sliderImagesType> = ({ images }) => {
         totalSlides={images.length}
         infinite={true}
         visibleSlides={3.9}>
-        <Slider classNameTray="parentSlideContainer">
+        <Slider classNameTray="parentSlidecustom-container">
           {images.map((src, num) => (
             <Slide index={num} key={`randomkey${num}`}>
               <figure>
@@ -43,7 +43,7 @@ export default CarouselSlider;
 const Wrapper = styled.div`
   margin-top: 5rem;
 
-  .parentSlideContainer {
+  .parentSlidecustom-container {
     @media (max-width: 991.98px) {
       width: 350% !important;
     }
