@@ -16,7 +16,6 @@ const Section: React.FC<sectionTypes> = ({
   bgImgColor = "var(--secondary-400)",
 }) => {
   const { wrapperRef } = useSectionAnimation(fromRightToLeft);
-  console.log("wrapper ref", wrapperRef.current);
 
   return (
     <Wrapper bgColor={bgColor} textColor={textColor} ref={wrapperRef}>

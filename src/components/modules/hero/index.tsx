@@ -39,12 +39,14 @@ const Hero: React.FC<heroTypes> = ({
 
                 {forFrontPage && (
                   <>
-                    <Button
-                      onClickHandler={() => {}}
-                      name="Watch Now"
-                      Icon={AiFillPlayCircle}
-                      isDarkBtn={false}
-                    />
+                    <div className="btnContainer">
+                      <Button
+                        onClickHandler={() => {}}
+                        name="Watch Now"
+                        Icon={AiFillPlayCircle}
+                        isDarkBtn={false}
+                      />
+                    </div>
                     <Features />
                   </>
                 )}

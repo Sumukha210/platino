@@ -30,7 +30,7 @@ export const Content = styled.div`
       transform: translateY(220px);
     }
   }
-  button {
+  .btnContainer {
     transform: translateY(40px);
     opacity: 0;
     visibility: hidden;

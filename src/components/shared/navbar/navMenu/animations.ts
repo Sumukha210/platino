@@ -1,5 +1,6 @@
 import useLayoutEffect from "@/utils/useLayoutEffect";
 import { gsap } from "gsap/dist/gsap";
+import { useRouter } from "next/router";
 
 interface navbarMenuAnimationProps {
   firstTime: boolean;
@@ -16,11 +17,14 @@ export const useNavbarMenuAnimation = ({
   children,
   menuOpen,
 }: navbarMenuAnimationProps) => {
+  const { pathname } = useRouter();
+
   useLayoutEffect(() => {
     tl.current = gsap.timeline({ defaults: { duration: 1.1 }, paused: true });
     if (firstTime) {
       return;
     }
+
     tl.current!.pause();
     tl.current!.to(
       children(".navbar__menu .menu"),
@@ -36,7 +40,8 @@ export const useNavbarMenuAnimation = ({
           children(".logo"),
           children(".bookNow"),
           "#hero .title",
-          "#hero #features",
+          pathname === "/" && "#hero .btnContainer",
+          pathname === "/" && "#hero #features",
         ],
         {
           autoAlpha: 0,
@@ -72,14 +77,14 @@ export const useNavbarMenuAnimation = ({
           autoAlpha: 0,
           duration: 0.8,
           ease: "power1.in",
-          stagger: 0.6,
+          stagger: 0.4,
         },
         "-=0.5"
       )
       .to(
         children(".navbar__menu .menu"),
         { autoAlpha: 1, ease: "power1.in" },
-        "-=0.8"
+        "-=1.6"
       );
   }, [firstTime]);
   useLayoutEffect(() => {
@@ -87,7 +92,7 @@ export const useNavbarMenuAnimation = ({
     if (menuOpen) {
       tl.current!.play();
     } else {
-      tl.current!.reverse(3.5, false);
+      tl.current!.reverse(3.5);
     }
   }, [menuOpen]);
 };

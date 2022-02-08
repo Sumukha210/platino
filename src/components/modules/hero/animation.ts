@@ -18,15 +18,17 @@ export const useHeroAnimation = (
     });
 
     forFrontPage &&
-      tl.current.to(children("button"), { y: 0, autoAlpha: 1 }, "-=1").from(
-        children(".feature span"),
-        {
-          y: 40,
-          autoAlpha: 0,
-          duration: 1.2,
-          ease: "power4.inOut",
-        },
-        "-=0.8"
-      );
+      tl.current
+        .to(children(".btnContainer"), { y: 0, autoAlpha: 1 }, "-=1")
+        .from(
+          children(".feature span"),
+          {
+            y: 40,
+            autoAlpha: 0,
+            duration: 1.2,
+            ease: "power4.inOut",
+          },
+          "-=0.8"
+        );
   }, []);
 };
