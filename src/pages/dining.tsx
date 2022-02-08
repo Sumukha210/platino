@@ -3,7 +3,7 @@ import React from "react";
 import bannerImg from "@/assets/images/dining-md.jpg";
 import Intro from "@/layout/dining_page/Intro";
 import Menu from "@/layout/dining_page/menu";
-import BookNowSection from "@/layout/dining_page/bookNowSection";
+import BookNowSection from "@/layout/dining_page/BooknowSection";
 
 const Dining = () => {
   return (
