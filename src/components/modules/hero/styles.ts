@@ -1,22 +1,46 @@
 import styled from "styled-components";
-import { bannerProp } from ".";
 
-export const Banner = styled.div<bannerProp>`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-    url(${props => props.bannerImg.src});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+export const Banner = styled.div`
   width: 100vw;
-  min-height: calc(80vh + 150px);
+  height: calc(80vh + 150px);
+  position: relative;
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+  }
+`;
+
+export const BannerImg = styled.figure`
+  height: 100%;
+
+  & > span {
+    height: 100% !important;
+    width: 100vw !important;
+
+    img {
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
 `;
 
 export const Content = styled.div`
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  display: grid;
+  align-items: center;
+
   .title {
     color: var(--light-color);
     font-family: var(--secondary-font);
@@ -30,6 +54,7 @@ export const Content = styled.div`
       transform: translateY(220px);
     }
   }
+
   .btnContainer {
     transform: translateY(40px);
     opacity: 0;

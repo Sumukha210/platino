@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;
+  z-index: 10000;
 
   @media (max-width: 991.98px) {
     padding: 20px 0;
@@ -61,21 +62,24 @@ export const Menu = styled.div`
   position: relative;
   z-index: 10001;
 
-  svg {
-    vertical-align: middle;
+  @media (max-width: 575.98px) {
+    order: 2;
   }
 
-  span {
-    &:last-child {
-      @media (max-width: 767.98px) {
-        display: none;
-      }
-    }
+  svg {
+    vertical-align: middle;
   }
 `;
 
 export const Logo = styled.div`
   text-align: center;
+  position: relative;
+  z-index: 999;
+
+  @media (max-width: 575.98px) {
+    order: 1;
+  }
+
   span {
     display: block;
     font-family: var(--secondary-font);
@@ -103,26 +107,21 @@ export const Logo = styled.div`
 `;
 
 export const BookNowBtn = styled.div`
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+
   & > span:first-child {
     display: inline-block;
 
     span:first-child {
       margin-right: 6px;
     }
-
-    @media (max-width: 575.98px) {
-      span {
-        display: block;
-        font-weight: 300;
-      }
-    }
   }
 
   & > span:last-child {
     svg {
-      @media (min-width: 575.98px) {
-        vertical-align: bottom;
-      }
+      vertical-align: middle;
     }
   }
 

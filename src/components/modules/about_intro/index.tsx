@@ -1,8 +1,13 @@
-import Button from "@/element/Button";
 import React from "react";
+import Button from "@/element/Button";
+import dynamic from "next/dynamic";
 import { BsArrowRight } from "react-icons/bs";
 import { Wrapper } from "./styles";
 import { aboutIntroData, useAboutIntroAnimation } from "./utils";
+
+const DynamicVideoComponent = dynamic(() => import("./VideoContainer"), {
+  loading: () => <p>Loading....</p>,
+});
 
 const AboutIntro = () => {
   const { caption, title, subtitle, para } = aboutIntroData;
@@ -28,21 +33,17 @@ const AboutIntro = () => {
         </div>
 
         {router.asPath != "/about" && (
-          <div className="btnContainer">
-            <Button
-              onClickHandler={() => router.push("/about")}
-              name="Explore more"
-              Icon={BsArrowRight}
-            />
-          </div>
+          <Button
+            onClickHandler={() => router.push("/about")}
+            name="Explore more"
+            Icon={BsArrowRight}
+          />
         )}
       </div>
 
-      <div className="videocustom-container">
-        <video autoPlay loop muted>
-          <source src="/intro.mp4" />
-        </video>
-      </div>
+      {/* <VideoContainer /> */}
+
+      <DynamicVideoComponent />
     </Wrapper>
   );
 };

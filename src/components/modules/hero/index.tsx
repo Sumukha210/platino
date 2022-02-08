@@ -1,21 +1,12 @@
 import React, { useRef } from "react";
-import { AiFillPlayCircle } from "react-icons/ai";
-import Button from "@/element/Button";
-import Features from "./Features";
 import { gsap } from "gsap/dist/gsap";
 import { useHeroAnimation } from "./animation";
-import { Banner, Content } from "./styles";
+import { Banner, BannerImg } from "./styles";
+import NextImg from "next/image";
+import HeroContent from "./HeroContent";
+import { heroProps } from "./types";
 
-export interface bannerProp {
-  bannerImg: StaticImageData;
-}
-
-interface heroTypes extends bannerProp {
-  forFrontPage?: boolean;
-  title: string;
-}
-
-const Hero: React.FC<heroTypes> = ({
+const Hero: React.FC<heroProps> = ({
   forFrontPage = false,
   title,
   bannerImg,
@@ -23,37 +14,16 @@ const Hero: React.FC<heroTypes> = ({
   const bannerRef = useRef(null);
   const tl = useRef<gsap.core.Timeline>();
   const children = gsap.utils.selector(bannerRef);
-
   useHeroAnimation(tl, children, forFrontPage);
 
   return (
     <>
-      <Banner ref={bannerRef} id="hero" bannerImg={bannerImg}>
-        <div className="custom-container">
-          <Content>
-            <div className="row justify-content-center">
-              <div className="col-md-10">
-                <h1
-                  className="title heading-2"
-                  dangerouslySetInnerHTML={{ __html: title }}></h1>
+      <Banner ref={bannerRef} id="hero">
+        <BannerImg>
+          <NextImg placeholder="blur" src={bannerImg} objectFit="cover" />
+        </BannerImg>
 
-                {forFrontPage && (
-                  <>
-                    <div className="btnContainer">
-                      <Button
-                        onClickHandler={() => {}}
-                        name="Watch Now"
-                        Icon={AiFillPlayCircle}
-                        isDarkBtn={false}
-                      />
-                    </div>
-                    <Features />
-                  </>
-                )}
-              </div>
-            </div>
-          </Content>
-        </div>
+        <HeroContent forFrontPage={forFrontPage} title={title} />
       </Banner>
     </>
   );

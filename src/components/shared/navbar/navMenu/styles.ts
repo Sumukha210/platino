@@ -19,12 +19,20 @@ export const Grid = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    max-width: 540px;
+    margin: auto;
+  }
 `;
 
 export const PersonalInfoBlock = styled.div`
-  position: relative;
-  .custom-container {
+  @media (max-width: 1199.98px) {
+    display: none;
   }
+
+  position: relative;
+
   .content {
     position: absolute;
     bottom: 2rem;
@@ -38,8 +46,12 @@ export const LeftSide = styled.div`
   margin-bottom: auto;
   padding-right: 4rem;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     margin-left: auto;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 9rem 0;
   }
 
   @media (max-width: 575.98px) {

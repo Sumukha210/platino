@@ -21,21 +21,25 @@ const Button: React.FC<btnType> = ({
   onClickHandler,
 }) => {
   return (
-    <CustomBtn
-      isDarkBtn={isDarkBtn}
-      type={submitType ? "submit" : "button"}
-      onClick={onClickHandler}>
-      <span>{name}</span>
-      {Icon && (
-        <span>
-          <Icon />
-        </span>
-      )}
-    </CustomBtn>
+    <BtnContainer className="btnContainer">
+      <CustomBtn
+        isDarkBtn={isDarkBtn}
+        type={submitType ? "submit" : "button"}
+        onClick={onClickHandler}>
+        <span>{name}</span>
+        {Icon && (
+          <span>
+            <Icon />
+          </span>
+        )}
+      </CustomBtn>
+    </BtnContainer>
   );
 };
 
 export default Button;
+
+const BtnContainer = styled.div``;
 
 const CustomBtn = styled.button<CustomBtnProps>`
   padding: 1rem 2rem;

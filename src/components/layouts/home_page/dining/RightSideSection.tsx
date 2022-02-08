@@ -32,13 +32,11 @@ const RightSection: React.FC<RightSectionProps> = ({ setCurrentMenuNum }) => {
           ))}
         </div>
 
-        <div className="btnContainer">
-          <Button
-            onClickHandler={() => router.push("/dining")}
-            name="Learn more"
-            Icon={BsArrowRight}
-          />
-        </div>
+        <Button
+          onClickHandler={() => router.push("/dining")}
+          name="Learn more"
+          Icon={BsArrowRight}
+        />
       </div>
     </>
   );
