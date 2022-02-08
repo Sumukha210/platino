@@ -1,28 +1,12 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import NextImg from "next/image";
 import { Wrapper } from "./styles";
-import useIsomorphicLayoutEffect from "@/utils/useLayoutEffect";
-import { gsap } from "gsap";
 import RightSection from "./RightSideSection";
 import { menuNames } from "./utils";
+import useAnimaton from "./useAnimaton";
 
 const Dining = () => {
-  const [currentMenuNum, setCurrentMenuNum] = useState(0);
-  const wrapperRef = useRef(null);
-  const children = gsap.utils.selector(wrapperRef);
-
-  useIsomorphicLayoutEffect(() => {
-    gsap.fromTo(
-      children("img"),
-      { autoAlpha: 0, scale: 0.9 },
-      {
-        scale: 1,
-        autoAlpha: 1,
-        duration: 0.9,
-        ease: "Power1.easeInOut",
-      }
-    );
-  }, [currentMenuNum]);
+  const { wrapperRef, currentMenuNum, setCurrentMenuNum } = useAnimaton();
 
   return (
     <Wrapper ref={wrapperRef}>

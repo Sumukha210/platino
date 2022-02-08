@@ -3,8 +3,8 @@ import bannerImg from "@/assets/images/banner-md.jpg";
 import Hero from "@/module/hero";
 import AboutIntro from "@/module/about_intro";
 import Facilities from "@/module/facilities";
-import Dining from "@/layout/home/dining";
-import Wellness from "@/layout/home/wellness";
+import Dining from "@/layout/home_page/dining";
+import Wellness from "@/layout/home_page/wellness";
 
 const Home = () => {
   return (

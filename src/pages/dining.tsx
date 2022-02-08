@@ -1,9 +1,9 @@
 import Hero from "@/module/hero";
 import React from "react";
 import bannerImg from "@/assets/images/dining-md.jpg";
-import Intro from "@/layout/dining/Intro";
-import Menu from "@/layout/dining/menu";
-import BookNowSection from "@/layout/dining/bookNowSection";
+import Intro from "@/layout/dining_page/Intro";
+import Menu from "@/layout/dining_page/menu";
+import BookNowSection from "@/layout/dining_page/bookNowSection";
 
 const Dining = () => {
   return (

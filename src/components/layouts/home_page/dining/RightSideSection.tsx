@@ -13,9 +13,9 @@ const RightSection: React.FC<RightSectionProps> = ({ setCurrentMenuNum }) => {
   return (
     <>
       <div className="right">
-        <h6 className="caption caption-2">Dining</h6>
+        <h6 className="caption-2 caption">Dining</h6>
         <h2 className="heading-4 title">Our Restaurant</h2>
-        <p className="sub-title sub-title-1">
+        <p className="sub-title-1 sub-title">
           The buffet breakfast is served in the lounge on the ground floor and
           also outside on our little patio.
         </p>
@@ -31,11 +31,14 @@ const RightSection: React.FC<RightSectionProps> = ({ setCurrentMenuNum }) => {
             </h6>
           ))}
         </div>
-        <Button
-          onClickHandler={() => router.push("/dining")}
-          name="Learn more"
-          Icon={BsArrowRight}
-        />
+
+        <div className="btnContainer">
+          <Button
+            onClickHandler={() => router.push("/dining")}
+            name="Learn more"
+            Icon={BsArrowRight}
+          />
+        </div>
       </div>
     </>
   );

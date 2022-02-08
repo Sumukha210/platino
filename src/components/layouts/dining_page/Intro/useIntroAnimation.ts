@@ -29,7 +29,7 @@ export const useIntroAnimation = () => {
   useIsomorphicLayoutEffect(() => {
     scrollingTextAnimation({
       trigger: wrapperRef.current,
-      targets: [children(".caption"), children(".para")],
+      targets: [children(".caption"), children(".para"), children("img")],
     });
   }, []);
 

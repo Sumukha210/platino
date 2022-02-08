@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Grid, NavWrapper, PersonalInfoBlock } from "./styles";
 import { gsap } from "gsap";
-import PersonalInfo from "@/layout/contact_us/address/PersonalInfo";
+import PersonalInfo from "@/layout/contact_page/address/PersonalInfo";
 import RightSideSection from "./RightSideSection";
 import LeftSideSection from "./LeftSideSection";
 

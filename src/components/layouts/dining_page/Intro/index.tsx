@@ -22,7 +22,7 @@ const Intro = () => {
                 experiences to be had and memories to be made.
               </h2>
 
-              <div className="imgContainer">
+              <div className="imgContainer ">
                 <div className="row gap-3">
                   <div className="col-sm-6 col-md-4">
                     <NextImg src={menuImg2} />
