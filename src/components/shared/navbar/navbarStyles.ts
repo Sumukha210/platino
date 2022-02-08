@@ -15,10 +15,21 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     color: var(--light-color);
+    cursor: pointer;
 
     svg {
       height: 24px;
       width: 24px;
+    }
+
+    .showCloseIcon {
+      svg {
+        height: 3rem;
+        width: 3rem;
+        border: 1px solid;
+        border-radius: 50%;
+        padding: 0.6rem;
+      }
     }
 
     .menu span,
@@ -43,89 +54,89 @@ export const Nav = styled.nav`
         margin-right: 6px;
       }
     }
+  }
+`;
 
-    .menu {
-      position: relative;
-      z-index: 10001;
+export const Menu = styled.div`
+  position: relative;
+  z-index: 10001;
 
-      svg {
-        vertical-align: bottom;
+  svg {
+    vertical-align: middle;
+  }
+
+  span {
+    &:last-child {
+      @media (max-width: 767.98px) {
+        display: none;
       }
+    }
+  }
+`;
 
-      span {
-        &:last-child {
-          @media (max-width: 767.98px) {
-            display: none;
-          }
-        }
+export const Logo = styled.div`
+  text-align: center;
+  span {
+    display: block;
+    font-family: var(--secondary-font);
+    font-style: normal;
+
+    &:first-child {
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 64px;
+
+      @media (max-width: 767.98px) {
+        font-size: 1.5rem;
+        line-height: 32px;
       }
     }
 
-    .bookNow {
-      & > span:first-child {
-        display: inline-block;
+    &:last-child {
+      font-weight: bold;
+      font-size: 0.65rem;
+      line-height: 13px;
+      letter-spacing: 0.075em;
+      margin-top: 4px;
+    }
+  }
+`;
 
-        span:first-child {
-          margin-right: 6px;
-        }
+export const BookNowBtn = styled.div`
+  & > span:first-child {
+    display: inline-block;
 
-        @media (max-width: 575.98px) {
-          span {
-            display: block;
-            font-weight: 300;
-          }
-        }
-      }
-
-      & > span:last-child {
-        svg {
-          @media (min-width: 575.98px) {
-            vertical-align: bottom;
-          }
-        }
-      }
-
-      &:hover {
-        span:first-child {
-          transform: translateX(-10px);
-        }
-      }
-
-      span {
-        transition: transform 0.3s ease-in-out;
-
-        @media (max-width: 767.98px) {
-          font-size: 0.9rem;
-        }
-      }
+    span:first-child {
+      margin-right: 6px;
     }
 
-    .logo {
-      text-align: center;
+    @media (max-width: 575.98px) {
       span {
         display: block;
-        font-family: var(--secondary-font);
-        font-style: normal;
-
-        &:first-child {
-          font-weight: bold;
-          font-size: 3rem;
-          line-height: 64px;
-
-          @media (max-width: 767.98px) {
-            font-size: 1.5rem;
-            line-height: 32px;
-          }
-        }
-
-        &:last-child {
-          font-weight: bold;
-          font-size: 0.65rem;
-          line-height: 13px;
-          letter-spacing: 0.075em;
-          margin-top: 4px;
-        }
+        font-weight: 300;
       }
+    }
+  }
+
+  & > span:last-child {
+    svg {
+      @media (min-width: 575.98px) {
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  &:hover {
+    span:first-child {
+      transform: translateX(-10px);
+    }
+  }
+
+  span {
+    transition: transform 0.3s ease-in-out;
+
+    @media (max-width: 767.98px) {
+      font-size: 0.9rem;
     }
   }
 `;

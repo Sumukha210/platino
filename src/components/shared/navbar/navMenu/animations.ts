@@ -23,45 +23,71 @@ export const useNavbarMenuAnimation = ({
     }
     tl.current!.pause();
     tl.current!.to(
-      [
-        children(".logo"),
-        children(".bookNow"),
-        "#hero .title",
-        "#hero #features",
-      ],
+      children(".navbar__menu .menu"),
       {
         autoAlpha: 0,
-        duration: 0.6,
-        ease: "power1.in",
-      }
+        ease: "Power1.easeOut",
+        duration: 0.1,
+      },
+      "<"
     )
+      .to(
+        [
+          children(".logo"),
+          children(".bookNow"),
+          "#hero .title",
+          "#hero #features",
+        ],
+        {
+          autoAlpha: 0,
+          duration: 0.6,
+          ease: "power1.in",
+        }
+      )
       .to(children("#navMenu"), {
         width: "20%",
-        duration: 1.2,
-        ease: "Power1.easeIn",
+        duration: 1,
+        ease: "power4.in",
       })
       .to(
         children("#navMenu"),
         {
           width: "100%",
-          duration: 0.7,
-          ease: "Power1.easeOut",
+          duration: 1,
+          ease: "power4.in",
+          delay: 0.3,
         },
-        "-=0.4"
+        "<"
       )
       .from(children(".menuName"), {
         stagger: 0.05,
         autoAlpha: 0,
         y: 30,
-        ease: "Power1.ease",
-      });
+        ease: "Power1.in",
+      })
+      .from(
+        [children("#navMenu .personalBlock"), children("#navMenu .logoBlock")],
+        {
+          y: 20,
+          autoAlpha: 0,
+          duration: 0.8,
+          ease: "power1.in",
+          stagger: 0.6,
+        },
+        "-=0.5"
+      )
+      .to(
+        children(".navbar__menu .menu"),
+        { autoAlpha: 1, ease: "power1.in" },
+        "-=0.8"
+      );
   }, [firstTime]);
   useLayoutEffect(() => {
     setFirstTime(false);
     if (menuOpen) {
       tl.current!.play();
     } else {
-      tl.current!.reverse(1.9);
+      tl.current!.reverse(3.5, false);
     }
   }, [menuOpen]);
 };

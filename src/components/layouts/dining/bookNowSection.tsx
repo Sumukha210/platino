@@ -39,7 +39,7 @@ const BookNowSection = () => {
       targets: [
         children(".heading"),
         children(".subtitle"),
-        children("button"),
+        children(".btnContainer"),
       ],
     });
   }, []);

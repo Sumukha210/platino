@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import { RiMenu2Fill } from "react-icons/ri";
 import { BsChevronRight } from "react-icons/bs";
-import { Nav } from "./navbarStyles";
+import { BookNowBtn, Logo, Menu, Nav } from "./navbarStyles";
 import NavMenu from "./navMenu";
 import { gsap } from "gsap/dist/gsap";
 import { useNavbarMenuAnimation } from "./navMenu/animations";
 import { useRouter } from "next/router";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,19 +34,21 @@ const Navbar = () => {
       <Nav>
         <div className="custom-container">
           <div className="navbar__menu">
-            <div className="menu" onClick={handleMenu}>
-              <span>
-                <RiMenu2Fill />
+            <Menu className="menu" onClick={handleMenu}>
+              <span className={`${menuOpen ? "showCloseIcon" : ""}`}>
+                {menuOpen ? <AiOutlineClose /> : <RiMenu2Fill />}
               </span>
               <span>Menu</span>
-            </div>
+            </Menu>
 
-            <div className="logo" onClick={() => router.push("/")}>
+            <Logo className="logo" onClick={() => router.push("/")}>
               <span>Platino</span>
               <span>Hotel - Restaurant</span>
-            </div>
+            </Logo>
 
-            <div className="bookNow">
+            <BookNowBtn
+              className="bookNow"
+              onClick={() => router.push("/book-now")}>
               <span>
                 <span>Book</span>
                 <span>Now</span>
@@ -53,7 +56,7 @@ const Navbar = () => {
               <span>
                 <BsChevronRight />
               </span>
-            </div>
+            </BookNowBtn>
           </div>
         </div>
       </Nav>

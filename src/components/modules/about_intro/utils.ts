@@ -37,7 +37,7 @@ export const useAboutIntroAnimation = () => {
         childrenEle(".title"),
         childrenEle(".subtitle"),
         childrenEle(".para"),
-        router.pathname === "/" && childrenEle("button"),
+        router.pathname === "/" && childrenEle(".btnContainer"),
       ],
       trigger: childrenEle(".header"),
     });

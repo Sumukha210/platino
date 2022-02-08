@@ -21,11 +21,13 @@ const Info = () => {
                 at accusantium laborum voluptatem nemo reprehenderit in est
                 enim!
               </p>
-              <Button
-                onClickHandler={() => router.push("/book-now")}
-                name="Book now"
-                isDarkBtn={false}
-              />
+              <div className="btnContainer">
+                <Button
+                  onClickHandler={() => router.push("/book-now")}
+                  name="Book now"
+                  isDarkBtn={false}
+                />
+              </div>
             </div>
           </div>
         </div>

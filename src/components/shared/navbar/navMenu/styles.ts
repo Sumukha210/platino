@@ -10,7 +10,6 @@ export const NavWrapper = styled.div`
   width: 0%;
   height: 100vh;
   z-index: 10000;
-  /* transform: translateX(120vw); */
   background-color: var(--secondary-400);
 `;
 
@@ -44,14 +43,39 @@ export const LeftSide = styled.div`
   }
 
   @media (max-width: 575.98px) {
-    padding: 5rem 32px;
+    padding: 9rem 32px;
   }
 
   .menuName {
-    margin-bottom: 1.5rem;
+    position: relative;
+    margin-bottom: 2rem;
     cursor: pointer;
-    font-weight: 600 !important;
+    font-weight: 600;
     color: var(--light-color);
+    transition: color 0.5s ease-in-out;
+
+    @media (min-width: 768px) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        width: 0%;
+        left: 0%;
+        height: 3px;
+        background-color: var(--secondary-200);
+        transition: width 0.5s ease-in-out;
+      }
+    }
+
+    &:hover {
+      color: var(--secondary-200);
+
+      @media (min-width: 768px) {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
 `;
 

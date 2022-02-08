@@ -60,7 +60,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  .btncustom-container {
+  .btnContainer {
     text-align: center;
   }
 

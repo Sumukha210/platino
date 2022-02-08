@@ -28,7 +28,7 @@ const AboutIntro = () => {
         </div>
 
         {router.asPath != "/about" && (
-          <div className="btncustom-container">
+          <div className="btnContainer">
             <Button
               onClickHandler={() => router.push("/about")}
               name="Explore more"
